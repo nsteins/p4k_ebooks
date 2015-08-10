@@ -1,0 +1,71 @@
+rock
+pop
+alternative
+indie
+jazz
+metal
+soul
+electronica
+folk
+punk
+oldies
+blues
+Hip-Hop
+country
+easy listening
+funk
+electro
+heavy metal
+R & B
+House
+trance
+hardcore
+rap
+lounge
+techno
+reggae
+new wave
+emo
+post-punk
+britpop
+trip-hop
+Disco
+industrial
+rhythm and blues
+synthpop
+metalcore
+club
+ska
+Fusion
+new age
+electropop
+Grunge
+dub
+post-rock
+idm
+swing
+post-hardcore
+hiphop
+rockabilly
+Lo-Fi
+motown
+shoegaze
+screamo
+darkwave
+dancehall
+noise
+indietronica
+trip hop
+grindcore
+eurodance
+bluegrass
+salsa
+Electroclash
+psytrance
+music
+powerpop
+Torquemada
+emocore
+post-grunge
+glam
+post rock
