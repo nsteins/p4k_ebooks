@@ -1,0 +1,5 @@
+env/
+fonts/
+*.pyc
+*.jpg
+settings.py

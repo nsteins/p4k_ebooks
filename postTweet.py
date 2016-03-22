@@ -3,15 +3,12 @@ import titleGenerator
 import albumGenerator
 from twython import Twython
 
+import settings
 #This will combine the results from albumGenerator.py and titleGenerator.py and post them to twitter using the Twython interface for the API. You will need to input your own authorization credentials to post to twitter.
 
-MY_CONSUMER_KEY = '3HGHFzwemPanF4cJl6TRXURLs'
-MY_CONSUMER_SECRET = 'zhTst30FnUedsudWeUtZpNJ6EJKlPaNXemULVTepyTJHL7o3n3'
-MY_ACCESS_TOKEN_KEY = '3403286699-8awGaAOaczRJ7lbg1ftniCkLTSgf8Sqbj7AD4vJ'
-MY_ACCESS_TOKEN_SECRET = 'rtq4tPJr06Xy763BwRagvs1zlS4X5iW8t6wQEsIZG6VL5'
 
 
-twitter = Twython(MY_CONSUMER_KEY, MY_CONSUMER_SECRET, MY_ACCESS_TOKEN_KEY, MY_ACCESS_TOKEN_SECRET)
+twitter = Twython(settings.MY_CONSUMER_KEY, settings.MY_CONSUMER_SECRET, settings.MY_ACCESS_TOKEN_KEY, settings.MY_ACCESS_TOKEN_SECRET)
 review = titleGenerator.generateDescription()
 while len(review) > 140:
     review = titleGenerator.generateDescription()
