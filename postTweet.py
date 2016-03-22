@@ -6,7 +6,8 @@ from twython import Twython
 import settings
 #This will combine the results from albumGenerator.py and titleGenerator.py and post them to twitter using the Twython interface for the API. You will need to input your own authorization credentials to post to twitter.
 
-
+activate_this = '~/p4k_ebooks/env/bin/activate_this.py'
+execfile(activate_this, dict(__file__=activate_this))
 
 twitter = Twython(settings.MY_CONSUMER_KEY, settings.MY_CONSUMER_SECRET, settings.MY_ACCESS_TOKEN_KEY, settings.MY_ACCESS_TOKEN_SECRET)
 review = titleGenerator.generateDescription()
