@@ -1,6 +1,6 @@
 import re
 import random
-
+import os
 #generates nonsense genres and nonsense reviews using wordlists and mad-libs style substitution
 
 def main():
@@ -10,17 +10,18 @@ def main():
         print "length {0}".format(len(text))
 
 def generateDescription():
-    with open("./wordlists/4syllableadjectives.txt",'r') as adjf:
+    dn = os.path.dirname(os.path.realpath(__file__))
+    with open(os.path.join(dn,"wordlists/4syllableadjectives.txt"),'r') as adjf:
         adjs = adjf.readlines()
-    with open("./wordlists/gerunds.txt",'r') as gerf:
+    with open(os.path.join(dn,"wordlists/gerunds.txt"),'r') as gerf:
         gers = gerf.readlines()
-    with open("./wordlists/activeverbs.txt",'r') as verbf:
+    with open(os.path.join(dn,"wordlists/activeverbs.txt"),'r') as verbf:
         verbs = verbf.readlines()
-    with open("./wordlists/4syllableadverbs.txt",'r') as advf:
+    with open(os.path.join(dn,"wordlists/4syllableadverbs.txt"),'r') as advf:
         advs = advf.readlines()
-    with open("./wordlists/directobject.txt",'r') as dof:
+    with open(os.path.join(dn,"wordlists/directobject.txt"),'r') as dof:
         dos = dof.readlines()
-    with open("./wordlists/emotions.txt",'r') as emof:
+    with open(os.path.join(dn,"wordlists/emotions.txt"),'r') as emof:
         emos = emof.readlines()
     
     genre = generateGenre()
@@ -74,9 +75,10 @@ def randel(inlist):
 	return inlist[random.randint(1,len(inlist))-1]
 
 def generateGenre():
-    with open("./wordlists/genres.txt","r") as genref:
+    dn = os.path.dirname(os.path.realpath(__file__))
+    with open(os.path.join(dn,"wordlists/genres.txt"),"r") as genref:
             genres = genref.readlines()	
-    with open("./wordlists/genreadj.txt","r") as adjf:
+    with open(os.path.join(dn,"wordlists/genreadj.txt"),"r") as adjf:
             adjs = adjf.readlines()
     out = "" 
     r = random.randint(1,6)

@@ -88,9 +88,11 @@ def square_image(local_image):
 	return local_image
 
 def add_text(local_image,string):
+	dn = os.path.dirname(os.path.realpath(__file__))
+	fonts_dir = os.path.join(dn,"fonts")
 	with Image.open(local_image).convert('RGBA') as im:
 		txt = Image.new('RGBA',im.size,(255,255,255,0))
-		fnt = ImageFont.truetype(os.path.join('./fonts',random.choice(os.listdir("./fonts"))),random.randint(20,72))
+		fnt = ImageFont.truetype(os.path.join(fonts_dir,random.choice(os.listdir(fonts_dir))),random.randint(20,72))
 		d = ImageDraw.Draw(txt)
 		s = im.size
 		loc = (random.randint(1,math.floor(0.55*s[0])),random.randint(1,s[1]))
